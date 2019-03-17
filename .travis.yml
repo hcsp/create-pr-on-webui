@@ -1,0 +1,1 @@
+script: grep '地上霜' -r .
