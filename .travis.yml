@@ -1,1 +1,1 @@
-script: grep '地上霜' -r .
+script: grep '地上霜' -r . --exclude=.travis.yml
