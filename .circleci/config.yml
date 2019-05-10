@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  test:
+    docker:
+      - image: circleci/classic:latest
+    steps:
+      - checkout
+      - run: grep '地上霜' -r . --include=静夜思.txt
+workflows:
+  version: 2
+  jobs: 
+    - test
+
