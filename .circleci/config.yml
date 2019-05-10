@@ -2,7 +2,7 @@ version: 2
 jobs:
   test:
     docker:
-      - image: circleci/classic:latest
+      - image: ubuntu:16.04
     steps:
       - checkout
       - run: grep '地上霜' -r . --include=静夜思.txt
