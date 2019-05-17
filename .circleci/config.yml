@@ -5,10 +5,14 @@ jobs:
       - image: ubuntu:16.04
     steps:
       - checkout
-      - run: grep '地上霜' -r . --include=静夜思.txt
+      - run:
+          name: Verify whitelist
+          command: ./circleci/verifyWhitelist.sh
+      - run:
+          name: Verify the poem is correct
+          command: grep '地上霜' -r . --include=静夜思.txt
 workflows:
   version: 2
   default:
-    jobs: 
+    jobs:
       - test
-
