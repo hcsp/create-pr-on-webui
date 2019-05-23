@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: Verify whitelist
-          command: ./circleci/verifyWhitelist.sh
+          command: ./.circleci/verifyWhitelist.sh
       - run:
           name: Verify the poem is correct
           command: grep '地上霜' -r . --include=静夜思.txt
