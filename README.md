@@ -1,3 +1,7 @@
-这个仓库的目的是帮助你学习Git和Github的使用。
+# 学习GitHub的使用
 
-仓库中有一首诗歌，其中包含一个错别字。请将错别字改正后提交一个Pull request。
+这个仓库中存放了[一首诗歌](https://github.com/hcsp/create-pr-on-webui/blob/master/README.md)，其中包含一个错别字。请将错别字改正后提交一个Pull request。
+
+敬请期待写代码啦的课程
+
+敬请期待
