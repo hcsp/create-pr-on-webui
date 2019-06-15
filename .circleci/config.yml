@@ -5,12 +5,18 @@ jobs:
       - image: ubuntu:16.04
     steps:
       - checkout
+      - restore_cache:
+          key: hcsp-{{ checksum "pom.xml" }}
       - run:
           name: Verify whitelist
           command: ./.circleci/verifyWhitelist.sh
       - run:
           name: Verify the poem is correct
           command: grep '地上霜' -r . --include=静夜思.txt
+      - save_cache: # saves the project dependencies
+          paths:
+            - ~/.m2
+          key: hcsp-{{ checksum "pom.xml" }}
 workflows:
   version: 2
   default:
