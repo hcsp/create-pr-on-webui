@@ -13,9 +13,6 @@ jobs:
       - run:
           name: Verify the poem is correct
           command: grep '地上霜' -r . --include=静夜思.txt
-      - run:
-          name: Wait a while
-          command: sleep 5
       - save_cache: # saves the project dependencies
           paths:
             - ~/.m2
